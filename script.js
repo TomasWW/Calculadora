@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const refresh = document.getElementById("resetear");
   const clearFirst = document.getElementById("clearFirst");
   const clearSecond = document.getElementById("clearSecond");
-//Funcion del boton "Calcular"
+  //Funcion del boton "Calcular"
   calcularButton.addEventListener("click", function () {
     let error = "";
     const num1 = parseFloat(document.getElementById("primerNumero").value);
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         error += `Debes elegir una operación`;
         document.getElementById("error").innerHTML = error;
     }
-    if (resultado) {
+    if (resultado == true || resultado == 0) {
       resultadoP.textContent = `Resultado: ${resultado}`;
       document.getElementById("error").innerHTML = "";
     }
